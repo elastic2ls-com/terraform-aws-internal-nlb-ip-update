@@ -26,11 +26,12 @@ Does an update of an A record with the private ip adresses of an ALB.
 Does an update of the nlb target group with the private ip adresses of the ALB.
 
 ## Sample Usage
-This module requires 4 arguments.
+This module requires 5 arguments.
 * `stage` the stage name will be used in different places.
 * `alb_description_name` the description of the internal NLB which private ip address you want to gather.
 * `zone_id` the id of the route53 zone which need to be updated.
 * `nlb_tg_arn` the arn of the target loadbalancer, which needs to be updated.
+* `intra_dns_name` the name of the internal domain
 
 
 ```
@@ -41,6 +42,7 @@ source = "git@github.com:elastic2ls/terraform-aws-internal-nlb-ip-update.git"
   alb_description_name  = var.alb_description_name
   zone_id               = var.zone_id
   nlb_tg_arn            = var.nlb_tg_arn
+  intra_dns_name        = var.intra_dns_name
 }
 ```
 
