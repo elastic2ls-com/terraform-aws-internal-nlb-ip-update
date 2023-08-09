@@ -2,6 +2,11 @@ variable "stage" {
   type = string
 }
 
+variable "main_region" {
+  type    = string
+  default = "eu-central-1"
+}
+
 variable "alb_description_name" {
   type = string
 }
